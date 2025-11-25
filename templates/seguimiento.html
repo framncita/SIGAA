@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Seguimiento{% endblock %}
+
+{% block content %}
+<section class="card">
+  <h2>📊 Seguimiento por Carrera</h2>
+
+  <form id="formSeguimiento" class="form">
+    <div class="form-group">
+      <label for="segEstudiante">Estudiante</label>
+      <select id="segEstudiante"></select>
+    </div>
+
+    <div class="form-group">
+      <label for="segComentario">Comentario / Estado</label>
+      <input id="segComentario" type="text" placeholder="Observación académica">
+    </div>
+
+    <button type="button" id="btnAgregarSeguimiento" class="btn btn-primary">
+      Guardar Seguimiento
+    </button>
+  </form>
+
+  <h3>📌 Historial de Seguimiento</h3>
+  <div id="listaSeguimientos"></div>
+
+  <a class="btn" href="/">Volver</a>
+</section>
+
+<script src="/static/js/seguimiento.js"></script>
+{% endblock %}

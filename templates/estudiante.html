@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %}Portal Estudiante{% endblock %}
+{% block content %}
+
+<section class="card">
+  <h2>Portal del Estudiante</h2>
+
+  <!-- Selector de estudiante -->
+  <div class="form-group">
+    <label for="selectEstudiante">Seleccionar estudiante</label>
+    <select id="selectEstudiante"></select>
+  </div>
+
+  <!-- Info general -->
+  <div id="estudianteDashboard" style="display:none;">
+
+    <h3 id="nombreEstudiante"></h3>
+
+    <!-- Panel de notas -->
+    <div class="panel">
+      <h3>📘 Mis Notas</h3>
+      <div class="table-container">
+        <table id="tablaNotas">
+          <thead>
+            <tr><th>Asignatura</th><th>Nota</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Panel asistencia -->
+    <div class="panel">
+      <h3>📅 Asistencia</h3>
+      <ul id="listaAsistencias"></ul>
+    </div>
+
+    <!-- Panel seguimiento -->
+    <div class="panel">
+      <h3>📊 Seguimiento</h3>
+      <ul id="listaSeguimiento"></ul>
+    </div>
+
+    <!-- Certificados -->
+    <div class="panel">
+      <h3>📄 Certificados</h3>
+      <button class="btn btn-primary" id="btnCertAlumno">Certificado Alumno Regular</button>
+      <button class="btn btn-primary" id="btnCertNotas">Certificado de Notas</button>
+    </div>
+
+  </div>
+
+  <a class="btn" href="/">Volver</a>
+</section>
+
+<!-- JS -->
+<script src="/static/js/estudiante.js"></script>
+
+{% endblock %}

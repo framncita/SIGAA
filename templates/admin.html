@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Administración{% endblock %}
+{% block content %}
+<section class="card">
+  <h2>Administración</h2>
+
+  <form id="formCrearUsuario" class="form">
+    <div class="form-group">
+      <label for="uNombre">Nombre</label>
+      <input id="uNombre" type="text" placeholder="Nombre">
+    </div>
+    <div class="form-group">
+      <label for="uApellido">Apellido</label>
+      <input id="uApellido" type="text" placeholder="Apellido">
+    </div>
+    <div class="form-group">
+      <label for="uEmail">Email</label>
+      <input id="uEmail" type="email" placeholder="email@ejemplo.com">
+    </div>
+    <div class="form-group">
+      <label for="uRol">Rol</label>
+      <select id="uRol">
+        <option value="estudiante">Estudiante</option>
+        <option value="docente">Docente</option>
+        <option value="admin">Admin</option>
+      </select>
+    </div>
+    <button type="button" id="btnCrearUsuario" class="btn btn-primary">Crear Usuario</button>
+  </form>
+
+  <h3>Usuarios</h3>
+  <div class="table-container">
+    <table id="tablaUsuarios">
+      <thead><tr><th>ID</th><th>Nombre</th><th>Email</th><th>Rol</th><th>Acciones</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <a class="btn" href="/">Volver</a>
+</section>
+{% endblock %}

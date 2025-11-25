@@ -1,0 +1,111 @@
+/* estilo.css - Tonos azules, diseño limpio inspirado en portal Vivo DUOC */
+
+:root{
+  --blue-900:#003a8c;
+  --blue-700:#0b5ed7;
+  --blue-500:#2b8aff;
+  --bg:#f4f7fb;
+  --card-bg:#ffffff;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box;font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif}
+body{
+  margin:0;
+  background: linear-gradient(180deg, #e9f2ff 0%, var(--bg) 100%);
+  color:#111827;
+  min-height:100vh;
+}
+
+.site-header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:18px 22px;
+  background: linear-gradient(90deg,var(--blue-900),var(--blue-700));
+  color:white;
+  box-shadow: 0 6px 18px rgba(3,37,76,0.12);
+}
+
+.site-header .brand h1{margin:0;font-size:1.6rem;letter-spacing:0.6px}
+.site-header .subtitle{margin-top:6px;font-size:0.85rem;opacity:0.95}
+
+.main-nav{
+  margin-top:12px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.main-nav .nav-link{
+  color:white;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:10px;
+  background: rgba(255,255,255,0.08);
+  font-weight:600;
+  transition:all .18s ease;
+}
+
+.main-nav .nav-link:hover{background:rgba(255,255,255,0.14);transform:translateY(-2px)}
+
+.main-container{
+  max-width:1100px;
+  margin:28px auto;
+  padding:0 18px;
+}
+
+.card{
+  background:var(--card-bg);
+  border-radius:14px;
+  padding:20px;
+  box-shadow: 0 8px 30px rgba(9,30,66,0.06);
+  margin-bottom:18px;
+}
+
+.hero{ text-align:center }
+
+.home-actions{ display:flex; gap:12px; justify-content:center; margin-top:16px; flex-wrap:wrap}
+
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:10px;
+  border: none;
+  cursor:pointer;
+  text-decoration:none;
+  font-weight:700;
+  color:white;
+  background:var(--blue-500);
+  transition:all .18s ease;
+}
+
+.btn:hover{ transform:translateY(-3px); box-shadow:0 8px 22px rgba(11,94,215,0.12) }
+
+.btn-primary{ background:var(--blue-700) }
+.btn-success{ background:#16a34a }
+.btn-danger{ background:#dc2626 }
+
+.table-container{ overflow:auto; border-radius:10px; margin-top:8px }
+table{ width:100%; border-collapse:collapse; min-width:480px }
+thead th{ text-align:left; padding:12px; background:linear-gradient(90deg,var(--blue-700),var(--blue-500)); color:white; font-weight:700 }
+tbody td{ padding:10px; border-bottom:1px solid #f1f5f9 }
+
+.form{ display:block; margin-top:12px }
+.form-group{ margin-bottom:12px }
+label{ display:block; margin-bottom:6px; font-weight:600; color:var(--muted) }
+input[type="text"], input[type="email"], input[type="number"], select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6eefc;
+  background: #fbfdff;
+}
+
+.alert{ display:none; padding:12px 14px; border-radius:10px; margin-bottom:12px; font-weight:600 }
+.alert.success{ background:#d1fae5; color:#065f46 }
+.alert.error{ background:#fee2e2; color:#991b1b }
+.alert.show{ display:block }
+
+.site-footer{ text-align:center; padding:18px; color:var(--muted); font-size:0.9rem; margin-top:18px }

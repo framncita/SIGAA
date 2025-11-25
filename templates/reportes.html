@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Reportes{% endblock %}
+{% block content %}
+<section class="card">
+  <h2>Generar Certificados</h2>
+
+  <select id="selectEstudianteCertificado"></select>
+
+  <button class="btn btn-primary" onclick="generarCertificadoAlumno()">Certificado de Alumno Regular</button>
+  <button class="btn btn-primary" onclick="generarCertificadoNotas()">Certificado de Notas</button>
+</section>
+{% endblock %}

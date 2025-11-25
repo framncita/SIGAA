@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block title %}Portal Docente{% endblock %} {% block
+content %}
+<section class="card">
+  <h2>Portal del Docente</h2>
+  <form id="formAgregarNota" class="form">
+    <div class="form-group">
+      <label for="docUsuarioId">ID Estudiante</label>
+      <input
+        id="docUsuarioId"
+        type="text"
+        placeholder="ID estudiante (ej: 1)"
+      />
+    </div>
+    <div class="form-group">
+      <label for="docAsignatura">Asignatura</label>
+      <input id="docAsignatura" type="text" placeholder="Nombre asignatura" />
+    </div>
+    <div class="form-group">
+      <label for="docNota">Nota</label>
+      <input
+        id="docNota"
+        type="number"
+        step="0.1"
+        min="0"
+        max="7"
+        placeholder="Nota (ej: 6.8)"
+      />
+    </div>
+    <button type="button" id="btnGuardarNota" class="btn btn-primary">
+      Guardar Nota
+    </button>
+  </form>
+  <h3>Notas recientes</h3>
+  <div class="table-container">
+    <table id="tablaNotasDoc">
+      <thead>
+        <tr>
+          <th>Usuario ID</th>
+          <th>Asignatura</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <a class="btn" href="/">Volver</a>
+</section>
+{% endblock %}
