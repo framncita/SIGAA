@@ -1,59 +1,50 @@
-{% extends 'base.html' %}
-{% block title %}Portal Estudiante{% endblock %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portal Estudiante - SIGAA</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/diseño.css') }}">
+</head>
+<body>
 
-<section class="card">
-  <h2>Portal del Estudiante</h2>
+<div class="panel">
+  <h1>🎓 Portal del Estudiante</h1>
 
-  <!-- Selector de estudiante -->
-  <div class="form-group">
-    <label for="selectEstudiante">Seleccionar estudiante</label>
-    <select id="selectEstudiante"></select>
+  <div class="form-box">
+    <label for="selectEstudiante">Seleccionar Estudiante:</label>
+    <select id="selectEstudiante" class="input"></select>
   </div>
 
-  <!-- Info general -->
-  <div id="estudianteDashboard" style="display:none;">
+  <div id="estudianteDashboard" class="dashboard" style="display:none;">
+    <h2 id="nombreEstudiante"></h2>
 
-    <h3 id="nombreEstudiante"></h3>
-
-    <!-- Panel de notas -->
-    <div class="panel">
-      <h3>📘 Mis Notas</h3>
-      <div class="table-container">
-        <table id="tablaNotas">
-          <thead>
-            <tr><th>Asignatura</th><th>Nota</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+    <div class="card">
+      <h3>📚 Mis Notas</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Asignatura</th>
+            <th>Nota</th>
+          </tr>
+        </thead>
+        <tbody id="tablaNotas"></tbody>
+      </table>
     </div>
 
-    <!-- Panel asistencia -->
-    <div class="panel">
-      <h3>📅 Asistencia</h3>
-      <ul id="listaAsistencias"></ul>
-    </div>
-
-    <!-- Panel seguimiento -->
-    <div class="panel">
-      <h3>📊 Seguimiento</h3>
+    <div class="card">
+      <h3>📝 Seguimiento Académico</h3>
       <ul id="listaSeguimiento"></ul>
     </div>
 
-    <!-- Certificados -->
-    <div class="panel">
+    <div class="card">
       <h3>📄 Certificados</h3>
-      <button class="btn btn-primary" id="btnCertAlumno">Certificado Alumno Regular</button>
-      <button class="btn btn-primary" id="btnCertNotas">Certificado de Notas</button>
+      <button id="btnCertAlumno" class="btn">Alumno Regular</button>
+      <button id="btnCertNotas" class="btn">Certificado de Notas</button>
     </div>
-
   </div>
 
-  <a class="btn" href="/">Volver</a>
-</section>
+  <a href="/" class="btn volver">Volver</a>
+</div>
 
-<!-- JS -->
-<script src="/static/js/estudiante.js"></script>
-
-{% endblock %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

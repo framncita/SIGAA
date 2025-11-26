@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8">
   <title>SIGAA - DUOC</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/diseño.css') }}">
 </head>
 <body>
+
   <div class="contenedor">
-    <h1>SIGAA - Sistema Académico</h1>
-    <a href="/estudiante" class="btn">Portal Estudiante</a>
-    <a href="/docente" class="btn">Portal Docente</a>
-    <a href="/admin" class="btn">Administración</a>
+
+    <!-- Logo -->
+    <img src="{{ url_for('static', filename='imagenes/logo.png') }}" class="logo" alt="Logo DUOC">
+
+    <h1>SIGAA</h1>
+    <p class="subtitulo">Sistema de Gestión Académica</p>
+
+    <div class="botones">
+      <a href="/estudiante" class="btn">🎓 Portal Estudiante</a>
+      <a href="/docente" class="btn">👩‍🏫 Portal Docente</a>
+      <a href="/admin" class="btn">⚙️ Administración</a>
+    </div>
+
   </div>
+
 </body>
 </html>
+
