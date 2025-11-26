@@ -192,3 +192,60 @@ td {
   background: #6c757d;
   color: white;
 }
+/* Gestión académica */
+.gestion-card {
+  max-width: 800px;
+  width: 100%;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-panel {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.tabla-panel {
+  background: #f1f3f5;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead {
+  background: #0077b6;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #e0f2ff;
+}
+
+/* Inputs lindos */
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}

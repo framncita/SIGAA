@@ -1,37 +1,61 @@
 {% extends 'base.html' %}
 {% block title %}Gestión Académica{% endblock %}
+
 {% block content %}
-<section class="card">
-  <h2>Gestión Académica</h2>
+<section class="card gestion-card">
 
-  <h3>Crear Matrícula</h3>
-  <form id="formMatricula" class="form">
-    <div class="form-group">
-      <label for="matUsuarioId">ID Usuario</label>
-      <input id="matUsuarioId" type="text" placeholder="ID usuario">
-    </div>
-    <div class="form-group">
-      <label for="matCarrera">Carrera</label>
-      <input id="matCarrera" type="text" placeholder="Nombre carrera">
-    </div>
-    <div class="form-group">
-      <label for="matAnio">Año</label>
-      <input id="matAnio" type="number" placeholder="Año (ej: 2024)">
-    </div>
-    <button id="btnCrearMatricula" type="button" class="btn btn-primary">Crear Matrícula</button>
-  </form>
+  <h2 class="titulo">📚 Gestión Académica</h2>
 
-  <h3>Matriculas</h3>
-  <div class="table-container">
-    <table id="tablaMatriculas">
-      <thead><tr><th>ID</th><th>Usuario</th><th>Carrera</th><th>Año</th></tr></thead>
-      <tbody></tbody>
-    </table>
+  <!-- Formulario -->
+  <div class="form-panel">
+    <h3>📝 Crear Matrícula</h3>
+
+    <form id="formMatricula" class="form">
+      <div class="form-group">
+        <label for="matUsuarioId">ID Usuario</label>
+        <input id="matUsuarioId" type="text" placeholder="Ej: 12345">
+      </div>
+
+      <div class="form-group">
+        <label for="matCarrera">Carrera</label>
+        <input id="matCarrera" type="text" placeholder="Ej: Ingeniería en Informática">
+      </div>
+
+      <div class="form-group">
+        <label for="matAnio">Año</label>
+        <input id="matAnio" type="number" placeholder="2024">
+      </div>
+
+      <button id="btnCrearMatricula" type="button" class="btn btn-primary">
+        ✅ Crear Matrícula
+      </button>
+    </form>
   </div>
 
-  <a class="btn" href="/">Volver</a>
+  <!-- Tabla -->
+  <div class="tabla-panel">
+    <h3>📋 Matrículas Registradas</h3>
+
+    <div class="table-container">
+      <table id="tablaMatriculas">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Carrera</th>
+            <th>Año</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <a class="btn volver" href="/">⬅ Volver</a>
+
 </section>
 {% endblock %}
+
 
 
 
