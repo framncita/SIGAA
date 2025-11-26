@@ -6,16 +6,19 @@
 </head>
 <body>
 
-<div class="panel">
+<div class="contenedor">
+
   <h1>🎓 Portal del Estudiante</h1>
+  <p class="subtitulo">Acceso a información académica</p>
 
   <div class="form-box">
     <label for="selectEstudiante">Seleccionar Estudiante:</label>
     <select id="selectEstudiante" class="input"></select>
   </div>
 
-  <div id="estudianteDashboard" class="dashboard" style="display:none;">
-    <h2 id="nombreEstudiante"></h2>
+  <div id="estudianteDashboard" style="display:none;">
+
+    <div id="nombreEstudiante" class="nombre-estudiante"></div>
 
     <div class="card">
       <h3>📚 Mis Notas</h3>
@@ -37,12 +40,18 @@
 
     <div class="card">
       <h3>📄 Certificados</h3>
-      <button id="btnCertAlumno" class="btn">Alumno Regular</button>
-      <button id="btnCertNotas" class="btn">Certificado de Notas</button>
+      <div class="botones">
+        <button id="btnCertAlumno" class="btn">Alumno Regular</button>
+        <button id="btnCertNotas" class="btn">Certificado de Notas</button>
+      </div>
     </div>
+
   </div>
 
-  <a href="/" class="btn volver">Volver</a>
+  <div class="botones">
+    <a href="/" class="btn btn-secundario">Volver</a>
+  </div>
+
 </div>
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
