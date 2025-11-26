@@ -1,41 +1,30 @@
-{% extends 'base.html' %} {% block title %}Portal Docente{% endblock %} {% block
-content %}
-<section class="card">
-  <h2>Portal del Docente</h2>
-  <form id="formAgregarNota" class="form">
-    <div class="form-group">
-      <label for="docUsuarioId">ID Estudiante</label>
-      <input
-        id="docUsuarioId"
-        type="text"
-        placeholder="ID estudiante (ej: 1)"
-      />
-    </div>
-    <div class="form-group">
-      <label for="docAsignatura">Asignatura</label>
-      <input id="docAsignatura" type="text" placeholder="Nombre asignatura" />
-    </div>
-    <div class="form-group">
-      <label for="docNota">Nota</label>
-      <input
-        id="docNota"
-        type="number"
-        step="0.1"
-        min="0"
-        max="7"
-        placeholder="Nota (ej: 6.8)"
-      />
-    </div>
-    <button type="button" id="btnGuardarNota" class="btn btn-primary">
-      Guardar Nota
-    </button>
-  </form>
-  <h3>Notas recientes</h3>
-  <div class="table-container">
+{<!DOCTYPE html>
+<html>
+<head>
+  <title>Portal Docente - SIGAA</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/diseño.css') }}">
+</head>
+<body>
+
+<div class="panel">
+  <h1>👩‍🏫 Portal Docente</h1>
+
+  <div class="card">
+    <h3>Registrar Notas</h3>
+
+    <input id="docUsuarioId" type="number" class="input" placeholder="ID del estudiante">
+    <input id="docAsignatura" type="text" class="input" placeholder="Asignatura">
+    <input id="docNota" type="number" step="0.1" class="input" placeholder="Nota (1.0 - 7.0)">
+    <button id="btnGuardarNota" class="btn">Guardar Nota</button>
+  </div>
+
+  <div class="card">
+    <h3>Notas Registradas</h3>
+
     <table id="tablaNotasDoc">
       <thead>
         <tr>
-          <th>Usuario ID</th>
+          <th>ID</th>
           <th>Asignatura</th>
           <th>Nota</th>
         </tr>
@@ -43,6 +32,10 @@ content %}
       <tbody></tbody>
     </table>
   </div>
-  <a class="btn" href="/">Volver</a>
-</section>
-{% endblock %}
+
+  <a href="/" class="btn volver">Volver</a>
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
