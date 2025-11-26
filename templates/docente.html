@@ -1,4 +1,4 @@
-{<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Portal Docente - SIGAA</title>
@@ -6,34 +6,42 @@
 </head>
 <body>
 
-<div class="panel">
+<div class="contenedor">
+
   <h1>👩‍🏫 Portal Docente</h1>
+  <p class="subtitulo">Gestión de calificaciones académicas</p>
 
   <div class="card">
-    <h3>Registrar Notas</h3>
+    <h3>📝 Registrar Notas</h3>
 
     <input id="docUsuarioId" type="number" class="input" placeholder="ID del estudiante">
     <input id="docAsignatura" type="text" class="input" placeholder="Asignatura">
     <input id="docNota" type="number" step="0.1" class="input" placeholder="Nota (1.0 - 7.0)">
-    <button id="btnGuardarNota" class="btn">Guardar Nota</button>
+
+    <div class="botones">
+      <button id="btnGuardarNota" class="btn">Guardar Nota</button>
+    </div>
   </div>
 
   <div class="card">
-    <h3>Notas Registradas</h3>
+    <h3>📊 Notas Registradas</h3>
 
-    <table id="tablaNotasDoc">
+    <table>
       <thead>
         <tr>
-          <th>ID</th>
+          <th>ID Estudiante</th>
           <th>Asignatura</th>
           <th>Nota</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody id="tablaNotasDoc"></tbody>
     </table>
   </div>
 
-  <a href="/" class="btn volver">Volver</a>
+  <div class="botones">
+    <a href="/" class="btn btn-secundario">Volver</a>
+  </div>
+
 </div>
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>

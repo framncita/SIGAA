@@ -129,3 +129,66 @@ select {
     transform: translateY(0);
   }
 }
+/* === Panel general === */
+.panel, .contenedor {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 18px;
+  margin-top: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Nombre destacado */
+.nombre-estudiante {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #003366;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background: #0077b6;
+  color: white;
+  padding: 12px;
+  border-radius: 8px 8px 0 0;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+/* Botón volver */
+.btn-secundario {
+  background: #adb5bd;
+  color: #333;
+}
+.btn-secundario:hover {
+  background: #6c757d;
+  color: white;
+}
